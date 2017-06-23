@@ -2,6 +2,8 @@ package edu.nju.tss.tssandroidclient.Json;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.io.Serializable;
+
 import edu.nju.tss.tssandroidclient.util.Gender;
 import edu.nju.tss.tssandroidclient.util.UserType;
 
@@ -9,7 +11,7 @@ import edu.nju.tss.tssandroidclient.util.UserType;
  * Created by admin on 2017/6/20.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class UserJson {
+public class UserJson implements Serializable{
 
     String username;
     String name;

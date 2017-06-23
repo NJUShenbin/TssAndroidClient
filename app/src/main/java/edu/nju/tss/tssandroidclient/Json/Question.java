@@ -2,11 +2,13 @@ package edu.nju.tss.tssandroidclient.Json;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.io.Serializable;
+
 /**
  * Created by admin on 2017/6/20.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Question {
+public class Question implements Serializable {
 
     int id;
     String title;

@@ -58,6 +58,7 @@ public class StudentMainActivity extends AppCompatActivity {
 
         public ViewPagerAdapter(FragmentActivity context) {
             super(context.getSupportFragmentManager());
+
         }
 
         @Override
