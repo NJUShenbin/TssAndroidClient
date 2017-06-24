@@ -122,6 +122,8 @@ public class LoginActivity extends AppCompatActivity{
             case student:
                 StudentMainActivity_.intent(getApplication()).start();
                 break;
+            case teacher:
+                TeacherMainActivity_.intent(getApplication()).start();
         }
     }
 

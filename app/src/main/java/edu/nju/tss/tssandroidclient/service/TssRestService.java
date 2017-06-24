@@ -8,7 +8,7 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import java.util.List;
 
 import edu.nju.tss.tssandroidclient.Json.AssignmentJson;
-import edu.nju.tss.tssandroidclient.Json.ClassJson;
+import edu.nju.tss.tssandroidclient.Json.CourseJson;
 import edu.nju.tss.tssandroidclient.Json.UserJson;
 
 /**
@@ -19,7 +19,7 @@ import edu.nju.tss.tssandroidclient.Json.UserJson;
 public interface TssRestService {
 
     @Get("/group")
-    List<ClassJson> getGroup();
+    List<CourseJson> getGroup();
 
     @Get("/group/{groupId}/students")
     List<UserJson> getGroupStudent(@Path int groupId);

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/teacher_nav_course"
+        android:icon="@drawable/ic_recent_actors_black_24dp"
+        android:title="" />
+
+    <item
+        android:id="@+id/teacher_nav_assignment"
+        android:icon="@drawable/ic_library_books_black_24dp"
+        android:title="" />
+
+    <item
+        android:id="@+id/teacher_nav_info"
+        android:icon="@drawable/ic_menu_black_24dp"
+        android:title="" />
+
+</menu>

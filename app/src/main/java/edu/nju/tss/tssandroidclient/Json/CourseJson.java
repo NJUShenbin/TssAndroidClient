@@ -2,10 +2,12 @@ package edu.nju.tss.tssandroidclient.Json;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.io.Serializable;
+
 /**
  * Created by admin on 2017/6/20.
  */
-public class ClassJson {
+public class CourseJson implements Serializable{
     int id;
     String name;
 

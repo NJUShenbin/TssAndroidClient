@@ -27,7 +27,9 @@
         <activity
             android:name=".StudentMainActivity_"
             android:label="@string/title_activity_student_main" />
-        <activity android:name=".AssignmentActivity_"></activity>
+        <activity android:name=".AssignmentActivity_" />
+        <activity android:name=".TeacherMainActivity_" />
+        <activity android:name=".StudentListActivity_"></activity>
     </application>
 
 </manifest>

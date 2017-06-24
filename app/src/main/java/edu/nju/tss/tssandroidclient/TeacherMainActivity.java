@@ -14,12 +14,14 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 import edu.nju.tss.tssandroidclient.fragment.AssignmentListFragment_;
+import edu.nju.tss.tssandroidclient.fragment.CourseListFragment;
+import edu.nju.tss.tssandroidclient.fragment.CourseListFragment_;
 import edu.nju.tss.tssandroidclient.fragment.UserInfoFragment_;
 
-@EActivity(R.layout.activity_student_main)
-public class StudentMainActivity extends AppCompatActivity {
+@EActivity(R.layout.activity_teacher_main)
+public class TeacherMainActivity extends AppCompatActivity {
 
-    @ViewById(R.id.studentViewPager)
+    @ViewById(R.id.teacherViewPager)
     protected ViewPager viewPager;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -28,11 +30,14 @@ public class StudentMainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.student_nav_course:
+                case R.id.teacher_nav_course:
                     viewPager.setCurrentItem(0);
                     return true;
-                case R.id.student_nav_info:
+                case R.id.teacher_nav_assignment:
                     viewPager.setCurrentItem(1);
+                    return true;
+                case R.id.teacher_nav_info:
+                    viewPager.setCurrentItem(2);
                     return true;
             }
             return false;
@@ -42,7 +47,7 @@ public class StudentMainActivity extends AppCompatActivity {
 
     @AfterViews
     void afterView(){
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.student_navigation);
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.teacher_navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         viewPager.setAdapter(new ViewPagerAdapter(this));
     }
@@ -51,11 +56,10 @@ public class StudentMainActivity extends AppCompatActivity {
 
         @SuppressWarnings("unchecked")
         private Class<? extends Fragment>[] pages = new Class[]
-                {AssignmentListFragment_.class, UserInfoFragment_.class};
+                {CourseListFragment_.class,AssignmentListFragment_.class, UserInfoFragment_.class};
 
         public ViewPagerAdapter(FragmentActivity context) {
             super(context.getSupportFragmentManager());
-
         }
 
         @Override

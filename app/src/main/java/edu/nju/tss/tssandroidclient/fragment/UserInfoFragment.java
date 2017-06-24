@@ -1,12 +1,6 @@
 package edu.nju.tss.tssandroidclient.fragment;
 
-import android.content.Context;
-import android.net.Uri;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,8 +22,8 @@ import edu.nju.tss.tssandroidclient.R;
 import edu.nju.tss.tssandroidclient.service.BasicAuthInterceptor;
 import edu.nju.tss.tssandroidclient.sharedPref.LoginPref_;
 
-@EFragment(R.layout.fragment_student_info)
-public class StudentInfoFragment extends Fragment {
+@EFragment(R.layout.fragment_user_info)
+public class UserInfoFragment extends Fragment {
 
     @Pref
     LoginPref_ loginPref;
